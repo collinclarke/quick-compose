@@ -2,17 +2,17 @@
   <form @submit.prevent="generateLink" class="form">
     <label>
       <span>To:</span>
-      <input type="email" v-model="recipient"/>
+      <input placeholder="email@example.com" type="email" v-model="recipient"/>
     </label>
     <label>
       <span>Subject:</span>
-      <input type="text" v-model="subject"/>
+      <input placeholder="Subject of your email" type="text" v-model="subject"/>
     </label>
     <label>
       <span>Body:</span>
-      <textarea v-model="body"/>
+      <textarea rows="5" v-model="body"/>
     </label>
-    <button type="submit">Create Auto Email Link</button>
+    <button type="submit">Generate Auto Email Link</button>
   </form>
 </template>
 
@@ -33,9 +33,9 @@ export default {
     return {
       apiOptions,
       optionIndex: 0,
-      recipient: 'collinclarke@gmail.com',
-      subject: 'hello',
-      body: 'humongous rediculous body'
+      recipient: '',
+      subject: '',
+      body: 'Replace text here with your email template.\n\n'
     }
   },
   methods: {
@@ -56,21 +56,7 @@ export default {
 
 <style lang="scss">
   .form {
-    font-size: 2rem;
     display: flex;
     flex-flow: column nowrap;
-    max-width: 768px;
-    margin: 0 auto;
-    label {
-      display: flex;
-      flex-flow: column nowrap;
-      text-align: left;
-      width: 100%;
-      margin-bottom: 1rem;
-    }
-    input, textarea {
-      font-size: inherit;
-      width: 100%;
-    }
   }
 </style>
