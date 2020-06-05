@@ -10,13 +10,10 @@
       <button type="button" @click="copyLink" class="copy-link-button">Copy Link</button>
     </section>
     <section>
-      <h2>Paste the above link into one of these link shortner services to generate a usable link for social media.</h2>
+      <h2>Paste the above link into Tiny Url or another link shortner services to generate a usable link for social media.</h2>
       <ul class="link-list">
         <li class="link-item">
           <a href="https://tinyurl.com/" target="_blank">Tiny Url</a>
-        </li>
-        <li class="link-item">
-          <a href="http://bit.ly/" target="_blank">Bitly</a>
         </li>
       </ul>
     </section>
