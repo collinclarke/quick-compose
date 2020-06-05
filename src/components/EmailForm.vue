@@ -2,7 +2,7 @@
   <form @submit.prevent="generateLink" class="form">
     <label>
       <span>To:</span>
-      <input placeholder="email@example.com" type="email" v-model="recipient"/>
+      <input placeholder="email@example.com" type="text" v-model="recipient"/>
     </label>
     <label>
       <span>Subject:</span>
