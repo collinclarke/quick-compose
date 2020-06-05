@@ -10,12 +10,7 @@
       <button type="button" @click="copyLink" class="copy-link-button">Copy Link</button>
     </section>
     <section>
-      <h2>Paste the above link into Tiny Url or another link shortner services to generate a usable link for social media.</h2>
-      <ul class="link-list">
-        <li class="link-item">
-          <a href="https://tinyurl.com/" target="_blank">Tiny Url</a>
-        </li>
-      </ul>
+      <h2>Paste the above link into a url shortner like <a class="link" href="https://tinyurl.com/" target="_blank">Tiny Url</a> to generate a usable link for social media.</h2>
     </section>
   </main>
 </template>
@@ -125,14 +120,14 @@ input, textarea {
   margin: 0; padding: 0;
   .link-item {
     padding: .25rem;
-    a {
-      color: #1515ff;
-      text-decoration: none;
-      font-weight: bold;
-      &:hover, &:focus {
-        text-decoration: underline;
-      }
-    }
+  }
+}
+.link {
+  color: #1515ff;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover, &:focus {
+    text-decoration: underline;
   }
 }
 .copy-link {
