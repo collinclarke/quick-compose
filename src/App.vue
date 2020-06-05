@@ -10,7 +10,7 @@
       <button type="button" @click="copyLink" class="copy-link-button">Copy Link</button>
     </section>
     <section>
-      <h2>Paste the above link into a url shortner like <a class="link" href="https://tinyurl.com/" target="_blank">Tiny Url</a> to generate a usable link for social media.</h2>
+      <h2>Paste the above link into a url shortener like <a class="link" href="https://tinyurl.com/" target="_blank">Tiny Url</a> to generate a usable link for social media.</h2>
     </section>
   </main>
 </template>
