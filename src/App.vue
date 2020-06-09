@@ -1,8 +1,16 @@
 <template>
   <main id="app">
     <section>
-      <h2>Use the form below to generate an auto compose email link.</h2>
-      <EmailForm @linkGenerated="updateLink" />
+      <h2>
+        <span>Use the form below to generate an auto compose</span>
+        <select class="inline-select" v-model="formtype">
+          <option v-for="formOption in formtypes" :value="formOption" :key="formOption">{{ formOption }}</option>
+        </select>
+        <span>link.</span>
+      </h2>
+      <EmailForm v-show="formtype === 'email'" @linkGenerated="updateLink" />
+      <IOSForm v-show="formtype === 'IOS text'" @linkGenerated="updateLink" />
+      <AndroidForm v-show="formtype === 'Android text'" @linkGenerated="updateLink" />
     </section>
     <section :class="{ hidden: !link.trim(), animate: true }" class="copy-link-holder">
       <p :class="{ hidden: !showNotification, animate: true, notification: true }">{{ notification }}</p>
@@ -17,15 +25,23 @@
 
 <script>
 import EmailForm from './components/EmailForm.vue'
+import IOSForm from './components/IOSForm.vue'
+import AndroidForm from './components/AndroidForm.vue'
+
+const formtypes = [ 'email', 'IOS text', 'Android text' ]
 
 export default {
   name: 'App',
   components: {
-    EmailForm
+    EmailForm,
+    IOSForm,
+    AndroidForm
   },
   data () {
     return {
       link: '',
+      formtypes,
+      formtype: formtypes[0],
       notification: '',
       showNotification: false
     }
@@ -142,5 +158,8 @@ input, textarea {
   color: #1515ff;
   text-align: center;
   width: auto;
+}
+.inline-select {
+  margin: 0 .5rem;
 }
 </style>
