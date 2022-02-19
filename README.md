@@ -1,5 +1,9 @@
 # quick-compose
 
+Project lives at https://autocompose.info/
+
+A tool for generating mailto links with prefilled emails.
+
 ## Project setup
 ```
 npm install
